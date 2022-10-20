@@ -6,22 +6,73 @@
 }
 
 nav {
-  text-align: right;
   position: fixed;
-  width: 100%;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.7)
+    ),
+    url(/assets/photos/adam-miller-dBaz0xhCkPY-unsplash.jpg);
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  z-index: 4;
 }
 
-.menu {
+input:checked + .menu nav {
+  visibility: visible;
+  opacity: 1;
+}
+
+input {
+  position: fixed;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  opacity: 0;
+  z-index: 11;
+  cursor: pointer;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+li {
+  font-family: "Rubik";
+  font-size: 40px;
+  font-weight: 700;
+  text-shadow: 0 3px 2px grey;
+  color: black;
+  text-transform: uppercase;
+  padding: 0 50px;
+}
+
+.menu button {
   width: 45px;
   height: 45px;
   background-color: transparent;
   border: 0;
-  cursor: pointer;
   margin: 10px;
   margin-top: 13px;
+  z-index: 10;
+  position: fixed;
+  right: 0;
 }
 
-.menu span {
+.menu button span {
   background-color: black;
   width: 100%;
   height: 5px;
@@ -36,7 +87,7 @@ button span:nth-child(2) {
   transition: left 0.3s ease-in-out;
 }
 
-button:hover span:nth-child(2) {
+input:hover + div span:nth-child(2) {
   left: 0;
 }
 
@@ -67,6 +118,16 @@ h1 {
   text-decoration: none;
   font-family: "Rubik";
   font-size: 0.7em;
+}
+
+.story span {
+  position: relative;
+  left: 0;
+  transition: left 0.3s ease-in-out;
+}
+
+.story:hover span {
+  left: 15px;
 }
 
 .arrow {
