@@ -43,8 +43,8 @@ input {
   position: fixed;
   right: 0;
   width: 50px;
-  height: 50px;
-  margin: 10px;
+  height: 46px;
+  margin: 15px;
   opacity: 0;
   z-index: 11;
   cursor: pointer;
@@ -58,12 +58,13 @@ ul {
   flex-direction: column;
   height: 100%;
   justify-content: space-evenly;
+  align-items: center;
   text-align: center;
 }
 
 li {
   font-family: "Rubik";
-  font-size: 40px;
+  font-size: 2.7rem;
   font-weight: 700;
   text-shadow: 0 3px 2px grey;
   text-transform: uppercase;
@@ -76,12 +77,12 @@ li a {
 }
 
 .menu button {
-  width: 4rem;
-  height: 4rem;
+  width: 2.6rem;
+  height: 2rem;
   background-color: transparent;
   border: 0;
-  margin: 1rem;
-  margin-top: 1.4rem;
+  margin: 20px;
+  padding: 0;
   z-index: 10;
   position: fixed;
   right: 0;
@@ -90,10 +91,10 @@ li a {
 .menu button span {
   background-color: black;
   width: 100%;
-  height: 0.5rem;
+  height: 6px;
   display: block;
-  margin-bottom: 0.6rem;
-  border-radius: 4px;
+  margin-bottom: 8px;
+  border-radius: 10px;
   box-shadow: 0px 0px 2px 1px #ffffff;
 }
 
@@ -172,7 +173,6 @@ h2 {
 .space {
   font-family: "Rubik";
   font-size: 2em;
-  margin-left: 8px;
   position: absolute;
   z-index: 1;
   left: 40px;
@@ -183,7 +183,7 @@ h2 {
 .ventures {
   position: absolute;
   font-size: 2.5em;
-  left: 95px;
+  left: 90px;
   top: 46px;
   opacity: 60%;
 }
@@ -267,7 +267,7 @@ Det här var det närmsta jag fick det till. */
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 5px 30px;
+  padding: 10px 30px;
   gap: 10px;
 }
 
@@ -293,30 +293,47 @@ Det här var det närmsta jag fick det till. */
 }
 
 @media screen and (min-width: 1024px) {
-  .major-tom {
-    display: block;
+  input {
+    margin: 24px;
+    width: 68px;
+    height: 52px;
   }
 
-  .gradient-quote {
-    display: block;
+  .menu button {
+    width: 4rem;
+    height: 3.5rem;
+    margin: 26px;
+  }
+
+  .menu button span {
+    height: 9px;
+    margin-bottom: 10px;
+  }
+
+  li {
+    font-size: 4.7rem;
+    max-width: 550px;
   }
 
   .header-box {
-    left: 80px;
-    width: 350px;
-    padding-bottom: 10px;
+    left: 100px;
+    top: 100px;
+    width: 500px;
+    padding-bottom: 20px;
     text-align: right;
+    border-width: 6px;
   }
 
   h1 {
-    font-size: 5em;
-    margin-top: 40px;
-    margin-bottom: 50px;
+    font-size: 7em;
+    margin-top: 75px;
+    margin-bottom: 75px;
   }
 
   .story {
     margin-right: 8px;
     font-weight: 400;
+    font-size: 1.1em;
   }
 
   .left {
@@ -334,82 +351,21 @@ Det här var det närmsta jag fick det till. */
       url("/assets/images/background-second-page-desktop.jpg");
     background-size: cover;
     width: 100%;
-    padding-left: 60px;
-    padding-right: 70px;
+    padding-left: 80px;
+    padding-right: 100px;
     justify-content: space-between;
   }
 
   .gradient-quote {
+    display: block;
+    opacity: 0.3;
     color: #d200a2;
     font-family: "rubik";
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: 300;
-  }
-
-  .space {
-    font-size: 3em;
-    left: 50px;
-  }
-
-  .ventures {
-    font-size: 3.7em;
-    left: 70px;
-    top: 65px;
-  }
-
-  .article-one {
-    margin-top: 220px;
-  }
-
-  h3 {
-    font-size: 1.5rem;
-  }
-
-  .article-one p {
-    line-height: 1.7;
-    font-size: 0.9rem;
-  }
-
-  blockquote {
-    font-size: 1.4rem;
-    font-weight: 300;
-  }
-
-  .major-tom {
-    width: 80px;
-    transform: rotate(5deg);
-    float: right;
-  }
-
-  .article-two p {
-    line-height: 1.7;
-    font-size: 0.9rem;
-    margin-left: 7px;
-  }
-
-  .article-two a {
-    margin-left: 7px;
-  }
-
-  .gradient-quote {
-    opacity: 0.3;
     font-style: italic;
-    padding-right: 100px;
     margin-bottom: 50px;
-  }
-
-  /* Lyckades inte få till så att skuggan försvinner på linjerna, 
-  kunde inte heller runda till kanterna på den*/
-  li a:hover {
-    text-decoration: underline;
-    text-decoration-color: #d200a2;
-    text-decoration-thickness: 5px;
-    text-underline-offset: 0.5rem;
-  }
-
-  nav {
-    background-image: none;
-    background-color: #ffffffda;
+    max-width: 450px;
   }
 
   .gradient-quote h4 {
@@ -426,5 +382,65 @@ Det här var det närmsta jag fick det till. */
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  }
+
+  .space {
+    font-size: 5em;
+    left: 80px;
+  }
+
+  .ventures {
+    font-size: 5.7em;
+    left: 122px;
+    top: 85px;
+  }
+
+  .article-one {
+    margin-top: 350px;
+  }
+
+  .article-one p {
+    line-height: 1.7;
+    font-size: 1rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  blockquote {
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+
+  .major-tom {
+    display: block;
+    width: 110px;
+    transform: rotate(3deg);
+    float: right;
+  }
+
+  .article-two p {
+    line-height: 1.7;
+    font-size: 1rem;
+    margin-left: 7px;
+  }
+
+  .article-two a {
+    margin-left: 7px;
+  }
+
+  /* Lyckades inte få till så att skuggan försvinner på linjerna, 
+  kunde inte heller runda till kanterna på den*/
+  li a:hover {
+    text-decoration: underline;
+    text-decoration-color: #d200a2;
+    text-decoration-thickness: 8px;
+    text-underline-offset: 0.5rem;
+  }
+
+  nav {
+    background-image: none;
+    background-color: #ffffffda;
   }
 }
